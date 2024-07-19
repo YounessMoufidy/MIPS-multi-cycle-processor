@@ -1,0 +1,757 @@
+m255
+K4
+z2
+!s11e vcom 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dE:/quartus projects/mips_multi_cycle
+Ealu
+Z1 w1707065851
+Z2 DPx4 ieee 11 numeric_std 0 22 aU^R8eGcicLcUFIaBQSL>3
+Z3 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z4 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+!i122 43
+R0
+Z5 8E:/quartus projects/mips_multi_cycle/Alu.vhd
+Z6 FE:/quartus projects/mips_multi_cycle/Alu.vhd
+l0
+L7 1
+V1nf?^686afIA<=?ZO6NAf1
+!s100 dH9n64^f`U]V2Sfa2Ic`M1
+Z7 OV;C;2020.1;71
+32
+Z8 !s110 1707066463
+!i10b 1
+Z9 !s108 1707066463.000000
+Z10 !s90 -reportprogress|300|-work|work|E:/quartus projects/mips_multi_cycle/Alu.vhd|E:/quartus projects/mips_multi_cycle/Alu_decoder.vhd|E:/quartus projects/mips_multi_cycle/control_unit.vhd|E:/quartus projects/mips_multi_cycle/D_FlipFlop.vhd|E:/quartus projects/mips_multi_cycle/instruction_decoder.vhd|E:/quartus projects/mips_multi_cycle/instruction_or_data_memory.vhd|E:/quartus projects/mips_multi_cycle/mips_multi_cycle.vhd|E:/quartus projects/mips_multi_cycle/mux21.vhd|E:/quartus projects/mips_multi_cycle/mux41.vhd|E:/quartus projects/mips_multi_cycle/programcounter.vhd|E:/quartus projects/mips_multi_cycle/Reg_file.vhd|E:/quartus projects/mips_multi_cycle/shift_left_circuit.vhd|E:/quartus projects/mips_multi_cycle/sign_extend.vhd|E:/quartus projects/mips_multi_cycle/SrcA_calculation.vhd|E:/quartus projects/mips_multi_cycle/SrcB_calculation.vhd|E:/quartus projects/mips_multi_cycle/tb_mips_multi_cycle.vhd|E:/quartus projects/mips_multi_cycle/Write_address_calculation.vhd|E:/quartus projects/mips_multi_cycle/Write_data_calculation.vhd|
+Z11 !s107 E:/quartus projects/mips_multi_cycle/Write_data_calculation.vhd|E:/quartus projects/mips_multi_cycle/Write_address_calculation.vhd|E:/quartus projects/mips_multi_cycle/tb_mips_multi_cycle.vhd|E:/quartus projects/mips_multi_cycle/SrcB_calculation.vhd|E:/quartus projects/mips_multi_cycle/SrcA_calculation.vhd|E:/quartus projects/mips_multi_cycle/sign_extend.vhd|E:/quartus projects/mips_multi_cycle/shift_left_circuit.vhd|E:/quartus projects/mips_multi_cycle/Reg_file.vhd|E:/quartus projects/mips_multi_cycle/programcounter.vhd|E:/quartus projects/mips_multi_cycle/mux41.vhd|E:/quartus projects/mips_multi_cycle/mux21.vhd|E:/quartus projects/mips_multi_cycle/mips_multi_cycle.vhd|E:/quartus projects/mips_multi_cycle/instruction_or_data_memory.vhd|E:/quartus projects/mips_multi_cycle/instruction_decoder.vhd|E:/quartus projects/mips_multi_cycle/D_FlipFlop.vhd|E:/quartus projects/mips_multi_cycle/control_unit.vhd|E:/quartus projects/mips_multi_cycle/Alu_decoder.vhd|E:/quartus projects/mips_multi_cycle/Alu.vhd|
+!i113 1
+Z12 o-work work
+Z13 tExplicit 1 CvgOpt 0
+Aarch
+R2
+R3
+R4
+Z14 DEx4 work 3 alu 0 22 1nf?^686afIA<=?ZO6NAf1
+!i122 43
+l19
+Z15 L17 29
+Z16 VccLbE2Gh:3BARYa__QL@Y0
+Z17 !s100 @bT]1RS5RZ9ANV[TV6jPg0
+R7
+32
+R8
+!i10b 1
+R9
+R10
+R11
+!i113 1
+R12
+R13
+Ealu_decoder
+Z18 w1706711829
+R3
+R4
+!i122 43
+R0
+Z19 8E:/quartus projects/mips_multi_cycle/Alu_decoder.vhd
+Z20 FE:/quartus projects/mips_multi_cycle/Alu_decoder.vhd
+l0
+L5 1
+VVDDWkZ@1b3AebVAVb9VO_0
+!s100 ]mifDfNSjoT>;RR7@<V@e2
+R7
+32
+R8
+!i10b 1
+R9
+R10
+R11
+!i113 1
+R12
+R13
+Abehavioral
+R3
+R4
+Z21 DEx4 work 11 alu_decoder 0 22 VDDWkZ@1b3AebVAVb9VO_0
+!i122 43
+l15
+Z22 L14 29
+Z23 V;zh1ZS<4jF::7FJC89iCT2
+Z24 !s100 A4boBi[8BgV0_X0>6CN5R1
+R7
+32
+R8
+!i10b 1
+R9
+R10
+R11
+!i113 1
+R12
+R13
+Econtrol_unit
+Z25 w1707065832
+R3
+R4
+!i122 43
+R0
+Z26 8E:/quartus projects/mips_multi_cycle/control_unit.vhd
+Z27 FE:/quartus projects/mips_multi_cycle/control_unit.vhd
+l0
+L4 1
+VJTLBdPgT^5TeMAGQ`BA_z0
+!s100 QDcQl@7PM<nSc^2ASc34_0
+R7
+32
+R8
+!i10b 1
+R9
+R10
+R11
+!i113 1
+R12
+R13
+Abehavioral
+R3
+R4
+Z28 DEx4 work 12 control_unit 0 22 JTLBdPgT^5TeMAGQ`BA_z0
+!i122 43
+l30
+Z29 L27 66
+Z30 VJ[0MgF8`GnC?I7F7_aF8o1
+Z31 !s100 QKRlFP_T1IaIG:eMii12;3
+R7
+32
+R8
+!i10b 1
+R9
+R10
+R11
+!i113 1
+R12
+R13
+Ed_flipflop
+Z32 w1706705237
+R3
+R4
+!i122 43
+R0
+Z33 8E:/quartus projects/mips_multi_cycle/D_FlipFlop.vhd
+Z34 FE:/quartus projects/mips_multi_cycle/D_FlipFlop.vhd
+l0
+L5 1
+VbH370cm7<P1>_90;VKn040
+!s100 [kRoiHHT2KjhAMPILc>i;0
+R7
+32
+R8
+!i10b 1
+R9
+R10
+R11
+!i113 1
+R12
+R13
+Abehavioural
+R3
+R4
+Z35 DEx4 work 10 d_flipflop 0 22 bH370cm7<P1>_90;VKn040
+!i122 43
+l19
+Z36 L18 15
+Z37 VJ<HQH88WXKEKeY0gH26R30
+Z38 !s100 4_Xo3cd43]XC:V<jQ4[5d0
+R7
+32
+R8
+!i10b 1
+R9
+R10
+R11
+!i113 1
+R12
+R13
+Einstruction_decoder
+Z39 w1706708615
+R3
+R4
+!i122 43
+R0
+Z40 8E:/quartus projects/mips_multi_cycle/instruction_decoder.vhd
+Z41 FE:/quartus projects/mips_multi_cycle/instruction_decoder.vhd
+l0
+L5 1
+VFEZ@SMf<Uh51HiNo;>mN80
+!s100 cDooTP>eLG<O:4inPOmH32
+R7
+32
+R8
+!i10b 1
+R9
+R10
+R11
+!i113 1
+R12
+R13
+Abehavioral
+R3
+R4
+Z42 DEx4 work 19 instruction_decoder 0 22 FEZ@SMf<Uh51HiNo;>mN80
+!i122 43
+l40
+Z43 L25 30
+Z44 VDC9XD2iNc62>[<U388U@M1
+Z45 !s100 a`h4@JM>d9GLeoWl2fCYk0
+R7
+32
+R8
+!i10b 1
+R9
+R10
+R11
+!i113 1
+R12
+R13
+Einstruction_or_data_memory
+Z46 w1707066438
+R2
+R3
+R4
+!i122 43
+R0
+Z47 8E:/quartus projects/mips_multi_cycle/instruction_or_data_memory.vhd
+Z48 FE:/quartus projects/mips_multi_cycle/instruction_or_data_memory.vhd
+l0
+L5 1
+V[jaK2c3^4DHZA[W9<?80L1
+!s100 7MzF@KEQELc<>g^`<deoJ3
+R7
+32
+R8
+!i10b 1
+R9
+R10
+R11
+!i113 1
+R12
+R13
+Aarch
+R2
+R3
+R4
+Z49 DEx4 work 26 instruction_or_data_memory 0 22 [jaK2c3^4DHZA[W9<?80L1
+!i122 43
+l76
+Z50 L16 104
+V;gPjzcI=0cj]gDFfLnkiJ0
+!s100 Pj_;Tj5X3Ij9^21RJo6a;1
+R7
+32
+R8
+!i10b 1
+R9
+R10
+R11
+!i113 1
+R12
+R13
+Emips_multi_cycle
+Z51 w1706789635
+R3
+R4
+!i122 43
+R0
+Z52 8E:/quartus projects/mips_multi_cycle/mips_multi_cycle.vhd
+Z53 FE:/quartus projects/mips_multi_cycle/mips_multi_cycle.vhd
+l0
+L5 1
+VoDZeJZVFbU<bHfij3dOzY1
+!s100 SMPaW_I:FOfa9z3=m8b4=2
+R7
+32
+R8
+!i10b 1
+R9
+R10
+R11
+!i113 1
+R12
+R13
+Abehavioral
+R3
+R4
+Z54 DEx4 work 16 mips_multi_cycle 0 22 oDZeJZVFbU<bHfij3dOzY1
+!i122 43
+l217
+Z55 L15 267
+Z56 V<IbPP7lo[=dP9F`1_Ab410
+Z57 !s100 NCE6eIj2;GT7]^[Q?e1cj3
+R7
+32
+R8
+!i10b 1
+R9
+R10
+R11
+!i113 1
+R12
+R13
+Emux21
+Z58 w1706705666
+R3
+R4
+!i122 43
+R0
+Z59 8E:/quartus projects/mips_multi_cycle/mux21.vhd
+Z60 FE:/quartus projects/mips_multi_cycle/mux21.vhd
+l0
+L5 1
+V;VKeVk@ZkMARU`4k_6TLl3
+!s100 JI<fISYLAIgZiU<U]9AjS0
+R7
+32
+R8
+!i10b 1
+R9
+R10
+R11
+!i113 1
+R12
+R13
+Aarch
+R3
+R4
+Z61 DEx4 work 5 mux21 0 22 ;VKeVk@ZkMARU`4k_6TLl3
+!i122 43
+l20
+Z62 L18 12
+Z63 V:JON?affWH=RIR>R_GONo2
+Z64 !s100 bJ@5PloE9gY?RnTl6UiXz1
+R7
+32
+R8
+!i10b 1
+R9
+R10
+R11
+!i113 1
+R12
+R13
+Emux41
+Z65 w1706705200
+R3
+R4
+!i122 43
+R0
+Z66 8E:/quartus projects/mips_multi_cycle/mux41.vhd
+Z67 FE:/quartus projects/mips_multi_cycle/mux41.vhd
+l0
+L5 1
+VO_Dcgo8z@_71=^4X8QZMk3
+!s100 QH@N;:THMYKdjSkXf=LS[0
+R7
+32
+R8
+!i10b 1
+R9
+R10
+R11
+!i113 1
+R12
+R13
+Abehavioural
+R3
+R4
+Z68 DEx4 work 5 mux41 0 22 O_Dcgo8z@_71=^4X8QZMk3
+!i122 43
+l18
+Z69 L17 15
+Z70 V]c;RE6Ef5lTGT14<AWO9;2
+Z71 !s100 QJK[LeVZRomDdDjGR=Ia51
+R7
+32
+R8
+!i10b 1
+R9
+R10
+R11
+!i113 1
+R12
+R13
+Eprogramcounter
+Z72 w1707064395
+R3
+R4
+!i122 43
+R0
+Z73 8E:/quartus projects/mips_multi_cycle/programcounter.vhd
+Z74 FE:/quartus projects/mips_multi_cycle/programcounter.vhd
+l0
+L4 1
+VBI4Dli]2=lfQ9PGXi<@:V0
+!s100 okfBHMng61>mhPl1oj@T50
+R7
+32
+R8
+!i10b 1
+R9
+R10
+R11
+!i113 1
+R12
+R13
+Abehavioral
+R3
+R4
+Z75 DEx4 work 14 programcounter 0 22 BI4Dli]2=lfQ9PGXi<@:V0
+!i122 43
+l75
+Z76 L19 82
+Z77 V:mah89:e?aO]DMG=0:]742
+Z78 !s100 ED[6?_;M@Io51N@6[c_:H3
+R7
+32
+R8
+!i10b 1
+R9
+R10
+R11
+!i113 1
+R12
+R13
+Ereg_file
+Z79 w1706708676
+R2
+R3
+R4
+!i122 43
+R0
+Z80 8E:/quartus projects/mips_multi_cycle/Reg_file.vhd
+Z81 FE:/quartus projects/mips_multi_cycle/Reg_file.vhd
+l0
+L5 1
+VO]M@cALzAagQN0g>U[g_K1
+!s100 ;0NG97S93Fm@<dK[]a;2R1
+R7
+32
+R8
+!i10b 1
+R9
+R10
+R11
+!i113 1
+R12
+R13
+Abehavioral
+R2
+R3
+R4
+Z82 DEx4 work 8 reg_file 0 22 O]M@cALzAagQN0g>U[g_K1
+!i122 43
+l24
+Z83 L20 24
+Z84 VB9:^dB9fM99:eHjo62JYD0
+Z85 !s100 mbDJC1[Gih]CUeUcA[1MJ3
+R7
+32
+R8
+!i10b 1
+R9
+R10
+R11
+!i113 1
+R12
+R13
+Eshift_left_circuit
+Z86 w1706705273
+R2
+R3
+R4
+!i122 43
+R0
+Z87 8E:/quartus projects/mips_multi_cycle/shift_left_circuit.vhd
+Z88 FE:/quartus projects/mips_multi_cycle/shift_left_circuit.vhd
+l0
+L6 1
+VRLjGQ_4kE6U9^6h3l<<P:2
+!s100 ]J13c9g5aAW^4afm:KX<E2
+R7
+32
+R8
+!i10b 1
+R9
+R10
+R11
+!i113 1
+R12
+R13
+Aarch
+R2
+R3
+R4
+Z89 DEx4 work 18 shift_left_circuit 0 22 RLjGQ_4kE6U9^6h3l<<P:2
+!i122 43
+l18
+Z90 L17 5
+Z91 V4KeARQT>FN?@mna4I6kPG0
+Z92 !s100 =:>PZ<g]HeYFFFKjMESVQ2
+R7
+32
+R8
+!i10b 1
+R9
+R10
+R11
+!i113 1
+R12
+R13
+Esign_extend
+Z93 w1706705304
+R3
+R4
+!i122 43
+R0
+Z94 8E:/quartus projects/mips_multi_cycle/sign_extend.vhd
+Z95 FE:/quartus projects/mips_multi_cycle/sign_extend.vhd
+l0
+L5 1
+V5@>3U;^04INn_GGfzIjQL3
+!s100 WnZ9DHM6dokGHkcR_<_582
+R7
+32
+R8
+!i10b 1
+R9
+R10
+R11
+!i113 1
+R12
+R13
+Aarch
+R3
+R4
+Z96 DEx4 work 11 sign_extend 0 22 5@>3U;^04INn_GGfzIjQL3
+!i122 43
+l19
+Z97 L17 6
+Z98 VTUzJ[Bd51Sz<bdcC8CNTB1
+Z99 !s100 fCh=ijVNZ5H;2O3f`0V;f1
+R7
+32
+R8
+!i10b 1
+R9
+R10
+R11
+!i113 1
+R12
+R13
+Esrca_calculation
+Z100 w1706710439
+R3
+R4
+!i122 43
+R0
+Z101 8E:/quartus projects/mips_multi_cycle/SrcA_calculation.vhd
+Z102 FE:/quartus projects/mips_multi_cycle/SrcA_calculation.vhd
+l0
+L5 1
+V=g=_IPcVD9bZK[PZm_6@93
+!s100 >2_eX3SMlbZQWRC8QP:_H1
+R7
+32
+R8
+!i10b 1
+R9
+R10
+R11
+!i113 1
+R12
+R13
+Aarch
+R3
+R4
+Z103 DEx4 work 16 srca_calculation 0 22 =g=_IPcVD9bZK[PZm_6@93
+!i122 43
+l43
+Z104 L18 40
+Z105 VbWj=Nc[VI59>G6JS5]kDm3
+Z106 !s100 Zf15iBHG77m1Wz_VL3nYE3
+R7
+32
+R8
+!i10b 1
+R9
+R10
+R11
+!i113 1
+R12
+R13
+Esrcb_calculation
+Z107 w1707065966
+R3
+R4
+!i122 43
+R0
+Z108 8E:/quartus projects/mips_multi_cycle/SrcB_calculation.vhd
+Z109 FE:/quartus projects/mips_multi_cycle/SrcB_calculation.vhd
+l0
+L5 1
+V9nV]h6n]R1VK;f3UYf_`O2
+!s100 1iebNmkB8HR2P>[iAYiD;0
+R7
+32
+R8
+!i10b 1
+R9
+R10
+R11
+!i113 1
+R12
+R13
+Aarch
+R3
+R4
+Z110 DEx4 work 16 srcb_calculation 0 22 9nV]h6n]R1VK;f3UYf_`O2
+!i122 43
+l56
+Z111 L15 61
+Z112 V_74QaIAJOefF@7EDzG3W62
+Z113 !s100 6zA_2oek]k=>YcI?d8Y@V2
+R7
+32
+R8
+!i10b 1
+R9
+R10
+R11
+!i113 1
+R12
+R13
+Etb_mips_multi_cycle
+Z114 w1706732095
+R3
+R4
+!i122 43
+R0
+Z115 8E:/quartus projects/mips_multi_cycle/tb_mips_multi_cycle.vhd
+Z116 FE:/quartus projects/mips_multi_cycle/tb_mips_multi_cycle.vhd
+l0
+L5 1
+VWLDh_bnBoP_OAgfaCGUWg2
+!s100 gd2U[@l@f`8AN_>QQKmED1
+R7
+32
+R8
+!i10b 1
+R9
+R10
+R11
+!i113 1
+R12
+R13
+Abehavioral
+R3
+R4
+Z117 DEx4 work 19 tb_mips_multi_cycle 0 22 WLDh_bnBoP_OAgfaCGUWg2
+!i122 43
+l22
+Z118 L9 40
+Z119 V?N:a64G0diW>Q<Tz?H3_=3
+Z120 !s100 AlAUKjleF=I>jHWCLR>[E2
+R7
+32
+R8
+!i10b 1
+R9
+R10
+R11
+!i113 1
+R12
+R13
+Ewrite_address_calculation
+Z121 w1706713976
+R3
+R4
+!i122 43
+R0
+Z122 8E:/quartus projects/mips_multi_cycle/Write_address_calculation.vhd
+Z123 FE:/quartus projects/mips_multi_cycle/Write_address_calculation.vhd
+l0
+L4 1
+VolgA_;bi^Q4?PFai5NJ2i1
+!s100 `gLAk0M^]kN@=MFZ84YEm3
+R7
+32
+R8
+!i10b 1
+R9
+R10
+R11
+!i113 1
+R12
+R13
+Aarch
+R3
+R4
+Z124 DEx4 work 25 write_address_calculation 0 22 olgA_;bi^Q4?PFai5NJ2i1
+!i122 43
+l28
+Z125 L15 21
+Z126 VJJ6Y`hzQ6>3kgaKYU1O0l0
+Z127 !s100 7XBnAf20Q6WN0fSadME9V0
+R7
+32
+R8
+!i10b 1
+R9
+R10
+R11
+!i113 1
+R12
+R13
+Ewrite_data_calculation
+Z128 w1706713001
+R3
+R4
+!i122 43
+R0
+Z129 8E:/quartus projects/mips_multi_cycle/Write_data_calculation.vhd
+Z130 FE:/quartus projects/mips_multi_cycle/Write_data_calculation.vhd
+l0
+L5 1
+Vf_C0OAbF]_R]HQTlWDVSO2
+!s100 VfOM4HJI0mi3I4O[;RI2U0
+R7
+32
+R8
+!i10b 1
+R9
+R10
+R11
+!i113 1
+R12
+R13
+Aarch
+R3
+R4
+Z131 DEx4 work 22 write_data_calculation 0 22 f_C0OAbF]_R]HQTlWDVSO2
+!i122 43
+l45
+Z132 L17 37
+Z133 V_O@URK5;M67=ShI:KkOg?2
+Z134 !s100 OnNBoJj_j74aOFdnARee[3
+R7
+32
+R8
+!i10b 1
+R9
+R10
+R11
+!i113 1
+R12
+R13
