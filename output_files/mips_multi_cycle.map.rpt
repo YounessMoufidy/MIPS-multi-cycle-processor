@@ -1,5 +1,5 @@
 Analysis & Synthesis report for mips_multi_cycle
-Sun Feb 04 17:59:37 2024
+Fri Jul 19 19:45:27 2024
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -71,7 +71,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Sun Feb 04 17:59:37 2024       ;
+; Analysis & Synthesis Status     ; Successful - Fri Jul 19 19:45:27 2024       ;
 ; Quartus Prime Version           ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
 ; Revision Name                   ; mips_multi_cycle                            ;
 ; Top-level Entity Name           ; mips_multi_cycle                            ;
@@ -187,10 +187,11 @@ https://fpgasoftware.intel.com/eula.
 ; Maximum allowed            ; 4           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 1           ;
+; Maximum used               ; 2           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
+;     Processor 2            ;   0.0%      ;
 +----------------------------+-------------+
 
 
@@ -1971,7 +1972,9 @@ Encoding Type:  One-Hot
 ;                                                                       ;                           ; instruction_decoder:component_instruction_decoder|D_FlipFlop:u1|Q[4],              ;
 ;                                                                       ;                           ; instruction_decoder:component_instruction_decoder|D_FlipFlop:u1|Q[5],              ;
 ;                                                                       ;                           ; D_FlipFlop:component_D_FlipFlop1|Q[2], D_FlipFlop:component_D_FlipFlop1|Q[3],      ;
-;                                                                       ;                           ; programcounter:component_programcounter|D_FlipFlop:u4|Q[13],                       ;
+;                                                                       ;                           ; programcounter:component_programcounter|D_FlipFlop:u4|Q[16],                       ;
+;                                                                       ;                           ; D_FlipFlop:component_D_FlipFlop1|Q[16],                                            ;
+;                                                                       ;                           ; programcounter:component_programcounter|D_FlipFlop:u4|Q[19],                       ;
 ;                                                                       ;                           ; Reg_file:component_Reg_file|Reg_file_array[16][3],                                 ;
 ;                                                                       ;                           ; Reg_file:component_Reg_file|Reg_file_array[8][3],                                  ;
 ;                                                                       ;                           ; Reg_file:component_Reg_file|Reg_file_array[9][3],                                  ;
@@ -1981,26 +1984,17 @@ Encoding Type:  One-Hot
 ;                                                                       ;                           ; Reg_file:component_Reg_file|Reg_file_array[16][1],                                 ;
 ;                                                                       ;                           ; Reg_file:component_Reg_file|Reg_file_array[8][1],                                  ;
 ;                                                                       ;                           ; Reg_file:component_Reg_file|Reg_file_array[9][1],                                  ;
-;                                                                       ;                           ; D_FlipFlop:component_D_FlipFlop3|Q[13], control_unit:component_control_unit|PS.S0, ;
+;                                                                       ;                           ; D_FlipFlop:component_D_FlipFlop3|Q[16],                                            ;
+;                                                                       ;                           ; Reg_file:component_Reg_file|Reg_file_array[16][16],                                ;
+;                                                                       ;                           ; Reg_file:component_Reg_file|Reg_file_array[8][16],                                 ;
+;                                                                       ;                           ; Reg_file:component_Reg_file|Reg_file_array[9][16],                                 ;
+;                                                                       ;                           ; D_FlipFlop:component_D_FlipFlop3|Q[19], control_unit:component_control_unit|PS.S0, ;
 ;                                                                       ;                           ; control_unit:component_control_unit|PS.S2,                                         ;
 ;                                                                       ;                           ; control_unit:component_control_unit|PS.S3,                                         ;
 ;                                                                       ;                           ; control_unit:component_control_unit|PS.S5,                                         ;
 ;                                                                       ;                           ; control_unit:component_control_unit|PS.S6,                                         ;
 ;                                                                       ;                           ; control_unit:component_control_unit|PS.S8,                                         ;
 ;                                                                       ;                           ; control_unit:component_control_unit|PS.S11                                         ;
-; programcounter:component_programcounter|D_FlipFlop:u4|Q[6]            ; Lost Fanouts              ; D_FlipFlop:component_D_FlipFlop1|Q[6], D_FlipFlop:component_D_FlipFlop1|Q[13],     ;
-;                                                                       ;                           ; programcounter:component_programcounter|D_FlipFlop:u4|Q[25],                       ;
-;                                                                       ;                           ; D_FlipFlop:component_D_FlipFlop1|Q[25],                                            ;
-;                                                                       ;                           ; Reg_file:component_Reg_file|Reg_file_array[16][6],                                 ;
-;                                                                       ;                           ; Reg_file:component_Reg_file|Reg_file_array[8][6],                                  ;
-;                                                                       ;                           ; Reg_file:component_Reg_file|Reg_file_array[9][6],                                  ;
-;                                                                       ;                           ; Reg_file:component_Reg_file|Reg_file_array[16][13],                                ;
-;                                                                       ;                           ; Reg_file:component_Reg_file|Reg_file_array[8][13],                                 ;
-;                                                                       ;                           ; Reg_file:component_Reg_file|Reg_file_array[9][13],                                 ;
-;                                                                       ;                           ; D_FlipFlop:component_D_FlipFlop3|Q[6], D_FlipFlop:component_D_FlipFlop3|Q[25],     ;
-;                                                                       ;                           ; Reg_file:component_Reg_file|Reg_file_array[16][25],                                ;
-;                                                                       ;                           ; Reg_file:component_Reg_file|Reg_file_array[8][25],                                 ;
-;                                                                       ;                           ; Reg_file:component_Reg_file|Reg_file_array[9][25]                                  ;
 ; Reg_file:component_Reg_file|Reg_file_array[0][31]                     ; Stuck at GND              ; Reg_file:component_Reg_file|Reg_file_array[1][31],                                 ;
 ;                                                                       ; due to stuck port data_in ; Reg_file:component_Reg_file|Reg_file_array[2][31],                                 ;
 ;                                                                       ;                           ; Reg_file:component_Reg_file|Reg_file_array[3][31],                                 ;
@@ -2011,6 +2005,14 @@ Encoding Type:  One-Hot
 ;                                                                       ;                           ; control_unit:component_control_unit|PS.S4,                                         ;
 ;                                                                       ;                           ; control_unit:component_control_unit|PS.S7,                                         ;
 ;                                                                       ;                           ; control_unit:component_control_unit|PS.S10                                         ;
+; programcounter:component_programcounter|D_FlipFlop:u4|Q[6]            ; Lost Fanouts              ; D_FlipFlop:component_D_FlipFlop1|Q[6], D_FlipFlop:component_D_FlipFlop1|Q[19],     ;
+;                                                                       ;                           ; Reg_file:component_Reg_file|Reg_file_array[16][6],                                 ;
+;                                                                       ;                           ; Reg_file:component_Reg_file|Reg_file_array[8][6],                                  ;
+;                                                                       ;                           ; Reg_file:component_Reg_file|Reg_file_array[9][6],                                  ;
+;                                                                       ;                           ; Reg_file:component_Reg_file|Reg_file_array[16][19],                                ;
+;                                                                       ;                           ; Reg_file:component_Reg_file|Reg_file_array[8][19],                                 ;
+;                                                                       ;                           ; Reg_file:component_Reg_file|Reg_file_array[9][19],                                 ;
+;                                                                       ;                           ; D_FlipFlop:component_D_FlipFlop3|Q[6]                                              ;
 ; Reg_file:component_Reg_file|Reg_file_array[0][6]                      ; Stuck at GND              ; Reg_file:component_Reg_file|Reg_file_array[1][6],                                  ;
 ;                                                                       ; due to stuck port data_in ; Reg_file:component_Reg_file|Reg_file_array[2][6],                                  ;
 ;                                                                       ;                           ; Reg_file:component_Reg_file|Reg_file_array[3][6],                                  ;
@@ -2249,6 +2251,11 @@ Encoding Type:  One-Hot
 ;                                                                       ;                           ; Reg_file:component_Reg_file|Reg_file_array[8][12],                                 ;
 ;                                                                       ;                           ; Reg_file:component_Reg_file|Reg_file_array[9][12],                                 ;
 ;                                                                       ;                           ; D_FlipFlop:component_D_FlipFlop3|Q[12]                                             ;
+; programcounter:component_programcounter|D_FlipFlop:u4|Q[13]           ; Lost Fanouts              ; D_FlipFlop:component_D_FlipFlop1|Q[13],                                            ;
+;                                                                       ;                           ; Reg_file:component_Reg_file|Reg_file_array[16][13],                                ;
+;                                                                       ;                           ; Reg_file:component_Reg_file|Reg_file_array[8][13],                                 ;
+;                                                                       ;                           ; Reg_file:component_Reg_file|Reg_file_array[9][13],                                 ;
+;                                                                       ;                           ; D_FlipFlop:component_D_FlipFlop3|Q[13]                                             ;
 ; programcounter:component_programcounter|D_FlipFlop:u4|Q[14]           ; Lost Fanouts              ; D_FlipFlop:component_D_FlipFlop1|Q[14],                                            ;
 ;                                                                       ;                           ; Reg_file:component_Reg_file|Reg_file_array[16][14],                                ;
 ;                                                                       ;                           ; Reg_file:component_Reg_file|Reg_file_array[8][14],                                 ;
@@ -2259,10 +2266,6 @@ Encoding Type:  One-Hot
 ;                                                                       ;                           ; Reg_file:component_Reg_file|Reg_file_array[8][15],                                 ;
 ;                                                                       ;                           ; Reg_file:component_Reg_file|Reg_file_array[9][15],                                 ;
 ;                                                                       ;                           ; D_FlipFlop:component_D_FlipFlop3|Q[15]                                             ;
-; programcounter:component_programcounter|D_FlipFlop:u4|Q[16]           ; Lost Fanouts              ; D_FlipFlop:component_D_FlipFlop1|Q[16], D_FlipFlop:component_D_FlipFlop3|Q[16],    ;
-;                                                                       ;                           ; Reg_file:component_Reg_file|Reg_file_array[16][16],                                ;
-;                                                                       ;                           ; Reg_file:component_Reg_file|Reg_file_array[8][16],                                 ;
-;                                                                       ;                           ; Reg_file:component_Reg_file|Reg_file_array[9][16]                                  ;
 ; programcounter:component_programcounter|D_FlipFlop:u4|Q[17]           ; Lost Fanouts              ; D_FlipFlop:component_D_FlipFlop1|Q[17], D_FlipFlop:component_D_FlipFlop3|Q[17],    ;
 ;                                                                       ;                           ; Reg_file:component_Reg_file|Reg_file_array[16][17],                                ;
 ;                                                                       ;                           ; Reg_file:component_Reg_file|Reg_file_array[8][17],                                 ;
@@ -2272,11 +2275,6 @@ Encoding Type:  One-Hot
 ;                                                                       ;                           ; Reg_file:component_Reg_file|Reg_file_array[8][18],                                 ;
 ;                                                                       ;                           ; Reg_file:component_Reg_file|Reg_file_array[9][18],                                 ;
 ;                                                                       ;                           ; D_FlipFlop:component_D_FlipFlop3|Q[18]                                             ;
-; programcounter:component_programcounter|D_FlipFlop:u4|Q[19]           ; Lost Fanouts              ; D_FlipFlop:component_D_FlipFlop1|Q[19],                                            ;
-;                                                                       ;                           ; Reg_file:component_Reg_file|Reg_file_array[16][19],                                ;
-;                                                                       ;                           ; Reg_file:component_Reg_file|Reg_file_array[8][19],                                 ;
-;                                                                       ;                           ; Reg_file:component_Reg_file|Reg_file_array[9][19],                                 ;
-;                                                                       ;                           ; D_FlipFlop:component_D_FlipFlop3|Q[19]                                             ;
 ; programcounter:component_programcounter|D_FlipFlop:u4|Q[20]           ; Lost Fanouts              ; D_FlipFlop:component_D_FlipFlop1|Q[20],                                            ;
 ;                                                                       ;                           ; Reg_file:component_Reg_file|Reg_file_array[16][20],                                ;
 ;                                                                       ;                           ; Reg_file:component_Reg_file|Reg_file_array[8][20],                                 ;
@@ -2301,6 +2299,10 @@ Encoding Type:  One-Hot
 ;                                                                       ;                           ; Reg_file:component_Reg_file|Reg_file_array[16][24],                                ;
 ;                                                                       ;                           ; Reg_file:component_Reg_file|Reg_file_array[8][24],                                 ;
 ;                                                                       ;                           ; Reg_file:component_Reg_file|Reg_file_array[9][24]                                  ;
+; programcounter:component_programcounter|D_FlipFlop:u4|Q[25]           ; Lost Fanouts              ; D_FlipFlop:component_D_FlipFlop1|Q[25], D_FlipFlop:component_D_FlipFlop3|Q[25],    ;
+;                                                                       ;                           ; Reg_file:component_Reg_file|Reg_file_array[16][25],                                ;
+;                                                                       ;                           ; Reg_file:component_Reg_file|Reg_file_array[8][25],                                 ;
+;                                                                       ;                           ; Reg_file:component_Reg_file|Reg_file_array[9][25]                                  ;
 ; programcounter:component_programcounter|D_FlipFlop:u4|Q[26]           ; Lost Fanouts              ; D_FlipFlop:component_D_FlipFlop1|Q[26],                                            ;
 ;                                                                       ;                           ; Reg_file:component_Reg_file|Reg_file_array[16][26],                                ;
 ;                                                                       ;                           ; Reg_file:component_Reg_file|Reg_file_array[8][26],                                 ;
@@ -2355,96 +2357,96 @@ Encoding Type:  One-Hot
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                                         ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------------------------------------+
 ; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |mips_multi_cycle|programcounter:component_programcounter|D_FlipFlop:u4|Q[0]                       ;
-; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |mips_multi_cycle|programcounter:component_programcounter|D_FlipFlop:u4|Q[31]                      ;
-; 4:1                ; 26 bits   ; 52 LEs        ; 52 LEs               ; 0 LEs                  ; Yes        ; |mips_multi_cycle|programcounter:component_programcounter|D_FlipFlop:u4|Q[2]                       ;
-; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |mips_multi_cycle|instruction_or_data_memory:component_instruction_or_data_memory|mem_array[63][6] ;
-; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |mips_multi_cycle|instruction_or_data_memory:component_instruction_or_data_memory|mem_array[62][6] ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |mips_multi_cycle|programcounter:component_programcounter|D_FlipFlop:u4|Q[29]                      ;
+; 4:1                ; 26 bits   ; 52 LEs        ; 52 LEs               ; 0 LEs                  ; Yes        ; |mips_multi_cycle|programcounter:component_programcounter|D_FlipFlop:u4|Q[7]                       ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |mips_multi_cycle|instruction_or_data_memory:component_instruction_or_data_memory|mem_array[63][3] ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |mips_multi_cycle|instruction_or_data_memory:component_instruction_or_data_memory|mem_array[62][4] ;
 ; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |mips_multi_cycle|instruction_or_data_memory:component_instruction_or_data_memory|mem_array[61][5] ;
-; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |mips_multi_cycle|instruction_or_data_memory:component_instruction_or_data_memory|mem_array[60][0] ;
-; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |mips_multi_cycle|instruction_or_data_memory:component_instruction_or_data_memory|mem_array[59][0] ;
-; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |mips_multi_cycle|instruction_or_data_memory:component_instruction_or_data_memory|mem_array[58][5] ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |mips_multi_cycle|instruction_or_data_memory:component_instruction_or_data_memory|mem_array[60][6] ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |mips_multi_cycle|instruction_or_data_memory:component_instruction_or_data_memory|mem_array[59][2] ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |mips_multi_cycle|instruction_or_data_memory:component_instruction_or_data_memory|mem_array[58][4] ;
 ; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |mips_multi_cycle|instruction_or_data_memory:component_instruction_or_data_memory|mem_array[57][4] ;
 ; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |mips_multi_cycle|instruction_or_data_memory:component_instruction_or_data_memory|mem_array[56][2] ;
-; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |mips_multi_cycle|instruction_or_data_memory:component_instruction_or_data_memory|mem_array[55][3] ;
-; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |mips_multi_cycle|instruction_or_data_memory:component_instruction_or_data_memory|mem_array[54][0] ;
-; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |mips_multi_cycle|instruction_or_data_memory:component_instruction_or_data_memory|mem_array[53][6] ;
-; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |mips_multi_cycle|instruction_or_data_memory:component_instruction_or_data_memory|mem_array[52][6] ;
-; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |mips_multi_cycle|instruction_or_data_memory:component_instruction_or_data_memory|mem_array[51][3] ;
-; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |mips_multi_cycle|instruction_or_data_memory:component_instruction_or_data_memory|mem_array[50][0] ;
-; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |mips_multi_cycle|instruction_or_data_memory:component_instruction_or_data_memory|mem_array[49][7] ;
-; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |mips_multi_cycle|instruction_or_data_memory:component_instruction_or_data_memory|mem_array[48][1] ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |mips_multi_cycle|instruction_or_data_memory:component_instruction_or_data_memory|mem_array[55][6] ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |mips_multi_cycle|instruction_or_data_memory:component_instruction_or_data_memory|mem_array[54][5] ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |mips_multi_cycle|instruction_or_data_memory:component_instruction_or_data_memory|mem_array[53][4] ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |mips_multi_cycle|instruction_or_data_memory:component_instruction_or_data_memory|mem_array[52][1] ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |mips_multi_cycle|instruction_or_data_memory:component_instruction_or_data_memory|mem_array[51][7] ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |mips_multi_cycle|instruction_or_data_memory:component_instruction_or_data_memory|mem_array[50][2] ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |mips_multi_cycle|instruction_or_data_memory:component_instruction_or_data_memory|mem_array[49][2] ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |mips_multi_cycle|instruction_or_data_memory:component_instruction_or_data_memory|mem_array[48][7] ;
 ; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |mips_multi_cycle|instruction_or_data_memory:component_instruction_or_data_memory|mem_array[47][1] ;
-; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |mips_multi_cycle|instruction_or_data_memory:component_instruction_or_data_memory|mem_array[46][6] ;
-; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |mips_multi_cycle|instruction_or_data_memory:component_instruction_or_data_memory|mem_array[45][6] ;
-; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |mips_multi_cycle|instruction_or_data_memory:component_instruction_or_data_memory|mem_array[44][7] ;
-; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |mips_multi_cycle|instruction_or_data_memory:component_instruction_or_data_memory|mem_array[43][1] ;
-; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |mips_multi_cycle|instruction_or_data_memory:component_instruction_or_data_memory|mem_array[42][2] ;
-; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |mips_multi_cycle|instruction_or_data_memory:component_instruction_or_data_memory|mem_array[41][7] ;
-; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |mips_multi_cycle|instruction_or_data_memory:component_instruction_or_data_memory|mem_array[40][1] ;
-; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |mips_multi_cycle|instruction_or_data_memory:component_instruction_or_data_memory|mem_array[39][3] ;
-; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |mips_multi_cycle|instruction_or_data_memory:component_instruction_or_data_memory|mem_array[38][5] ;
-; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |mips_multi_cycle|instruction_or_data_memory:component_instruction_or_data_memory|mem_array[37][2] ;
-; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |mips_multi_cycle|instruction_or_data_memory:component_instruction_or_data_memory|mem_array[36][2] ;
-; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |mips_multi_cycle|instruction_or_data_memory:component_instruction_or_data_memory|mem_array[35][5] ;
-; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |mips_multi_cycle|instruction_or_data_memory:component_instruction_or_data_memory|mem_array[34][6] ;
-; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |mips_multi_cycle|instruction_or_data_memory:component_instruction_or_data_memory|mem_array[33][4] ;
-; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |mips_multi_cycle|instruction_or_data_memory:component_instruction_or_data_memory|mem_array[32][3] ;
-; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |mips_multi_cycle|instruction_or_data_memory:component_instruction_or_data_memory|mem_array[31][6] ;
-; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |mips_multi_cycle|instruction_or_data_memory:component_instruction_or_data_memory|mem_array[30][1] ;
-; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |mips_multi_cycle|instruction_or_data_memory:component_instruction_or_data_memory|mem_array[29][1] ;
-; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |mips_multi_cycle|instruction_or_data_memory:component_instruction_or_data_memory|mem_array[28][2] ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |mips_multi_cycle|instruction_or_data_memory:component_instruction_or_data_memory|mem_array[46][2] ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |mips_multi_cycle|instruction_or_data_memory:component_instruction_or_data_memory|mem_array[45][1] ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |mips_multi_cycle|instruction_or_data_memory:component_instruction_or_data_memory|mem_array[44][4] ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |mips_multi_cycle|instruction_or_data_memory:component_instruction_or_data_memory|mem_array[43][4] ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |mips_multi_cycle|instruction_or_data_memory:component_instruction_or_data_memory|mem_array[42][5] ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |mips_multi_cycle|instruction_or_data_memory:component_instruction_or_data_memory|mem_array[41][6] ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |mips_multi_cycle|instruction_or_data_memory:component_instruction_or_data_memory|mem_array[40][3] ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |mips_multi_cycle|instruction_or_data_memory:component_instruction_or_data_memory|mem_array[39][2] ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |mips_multi_cycle|instruction_or_data_memory:component_instruction_or_data_memory|mem_array[38][0] ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |mips_multi_cycle|instruction_or_data_memory:component_instruction_or_data_memory|mem_array[37][1] ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |mips_multi_cycle|instruction_or_data_memory:component_instruction_or_data_memory|mem_array[36][0] ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |mips_multi_cycle|instruction_or_data_memory:component_instruction_or_data_memory|mem_array[35][2] ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |mips_multi_cycle|instruction_or_data_memory:component_instruction_or_data_memory|mem_array[34][4] ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |mips_multi_cycle|instruction_or_data_memory:component_instruction_or_data_memory|mem_array[33][2] ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |mips_multi_cycle|instruction_or_data_memory:component_instruction_or_data_memory|mem_array[32][0] ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |mips_multi_cycle|instruction_or_data_memory:component_instruction_or_data_memory|mem_array[31][7] ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |mips_multi_cycle|instruction_or_data_memory:component_instruction_or_data_memory|mem_array[30][3] ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |mips_multi_cycle|instruction_or_data_memory:component_instruction_or_data_memory|mem_array[29][4] ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |mips_multi_cycle|instruction_or_data_memory:component_instruction_or_data_memory|mem_array[28][1] ;
 ; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |mips_multi_cycle|instruction_or_data_memory:component_instruction_or_data_memory|mem_array[27][0] ;
-; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |mips_multi_cycle|instruction_or_data_memory:component_instruction_or_data_memory|mem_array[26][2] ;
-; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |mips_multi_cycle|instruction_or_data_memory:component_instruction_or_data_memory|mem_array[25][2] ;
-; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |mips_multi_cycle|instruction_or_data_memory:component_instruction_or_data_memory|mem_array[24][2] ;
-; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |mips_multi_cycle|instruction_or_data_memory:component_instruction_or_data_memory|mem_array[23][3] ;
-; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |mips_multi_cycle|instruction_or_data_memory:component_instruction_or_data_memory|mem_array[22][2] ;
-; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |mips_multi_cycle|instruction_or_data_memory:component_instruction_or_data_memory|mem_array[21][4] ;
-; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |mips_multi_cycle|instruction_or_data_memory:component_instruction_or_data_memory|mem_array[20][3] ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |mips_multi_cycle|instruction_or_data_memory:component_instruction_or_data_memory|mem_array[26][5] ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |mips_multi_cycle|instruction_or_data_memory:component_instruction_or_data_memory|mem_array[25][5] ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |mips_multi_cycle|instruction_or_data_memory:component_instruction_or_data_memory|mem_array[24][4] ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |mips_multi_cycle|instruction_or_data_memory:component_instruction_or_data_memory|mem_array[23][2] ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |mips_multi_cycle|instruction_or_data_memory:component_instruction_or_data_memory|mem_array[22][6] ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |mips_multi_cycle|instruction_or_data_memory:component_instruction_or_data_memory|mem_array[21][7] ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |mips_multi_cycle|instruction_or_data_memory:component_instruction_or_data_memory|mem_array[20][5] ;
 ; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |mips_multi_cycle|instruction_or_data_memory:component_instruction_or_data_memory|mem_array[19][3] ;
-; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |mips_multi_cycle|instruction_or_data_memory:component_instruction_or_data_memory|mem_array[18][6] ;
-; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |mips_multi_cycle|instruction_or_data_memory:component_instruction_or_data_memory|mem_array[17][2] ;
-; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |mips_multi_cycle|instruction_or_data_memory:component_instruction_or_data_memory|mem_array[16][4] ;
-; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |mips_multi_cycle|instruction_or_data_memory:component_instruction_or_data_memory|mem_array[15][2] ;
-; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |mips_multi_cycle|instruction_or_data_memory:component_instruction_or_data_memory|mem_array[14][0] ;
-; 5:1                ; 6 bits    ; 18 LEs        ; 12 LEs               ; 6 LEs                  ; Yes        ; |mips_multi_cycle|instruction_or_data_memory:component_instruction_or_data_memory|mem_array[13][4] ;
-; 5:1                ; 5 bits    ; 15 LEs        ; 10 LEs               ; 5 LEs                  ; Yes        ; |mips_multi_cycle|instruction_or_data_memory:component_instruction_or_data_memory|mem_array[12][5] ;
-; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |mips_multi_cycle|instruction_or_data_memory:component_instruction_or_data_memory|mem_array[11][6] ;
-; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |mips_multi_cycle|instruction_or_data_memory:component_instruction_or_data_memory|mem_array[10][7] ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |mips_multi_cycle|instruction_or_data_memory:component_instruction_or_data_memory|mem_array[18][4] ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |mips_multi_cycle|instruction_or_data_memory:component_instruction_or_data_memory|mem_array[17][0] ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |mips_multi_cycle|instruction_or_data_memory:component_instruction_or_data_memory|mem_array[16][0] ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |mips_multi_cycle|instruction_or_data_memory:component_instruction_or_data_memory|mem_array[15][1] ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |mips_multi_cycle|instruction_or_data_memory:component_instruction_or_data_memory|mem_array[14][5] ;
+; 5:1                ; 6 bits    ; 18 LEs        ; 12 LEs               ; 6 LEs                  ; Yes        ; |mips_multi_cycle|instruction_or_data_memory:component_instruction_or_data_memory|mem_array[13][5] ;
+; 5:1                ; 5 bits    ; 15 LEs        ; 10 LEs               ; 5 LEs                  ; Yes        ; |mips_multi_cycle|instruction_or_data_memory:component_instruction_or_data_memory|mem_array[12][4] ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |mips_multi_cycle|instruction_or_data_memory:component_instruction_or_data_memory|mem_array[11][5] ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |mips_multi_cycle|instruction_or_data_memory:component_instruction_or_data_memory|mem_array[10][6] ;
 ; 5:1                ; 6 bits    ; 18 LEs        ; 12 LEs               ; 6 LEs                  ; Yes        ; |mips_multi_cycle|instruction_or_data_memory:component_instruction_or_data_memory|mem_array[9][1]  ;
-; 5:1                ; 3 bits    ; 9 LEs         ; 6 LEs                ; 3 LEs                  ; Yes        ; |mips_multi_cycle|instruction_or_data_memory:component_instruction_or_data_memory|mem_array[8][6]  ;
-; 5:1                ; 7 bits    ; 21 LEs        ; 14 LEs               ; 7 LEs                  ; Yes        ; |mips_multi_cycle|instruction_or_data_memory:component_instruction_or_data_memory|mem_array[7][6]  ;
-; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |mips_multi_cycle|instruction_or_data_memory:component_instruction_or_data_memory|mem_array[6][1]  ;
-; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |mips_multi_cycle|instruction_or_data_memory:component_instruction_or_data_memory|mem_array[5][7]  ;
-; 5:1                ; 7 bits    ; 21 LEs        ; 14 LEs               ; 7 LEs                  ; Yes        ; |mips_multi_cycle|instruction_or_data_memory:component_instruction_or_data_memory|mem_array[4][0]  ;
-; 5:1                ; 4 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; Yes        ; |mips_multi_cycle|instruction_or_data_memory:component_instruction_or_data_memory|mem_array[3][7]  ;
-; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |mips_multi_cycle|instruction_or_data_memory:component_instruction_or_data_memory|mem_array[2][6]  ;
-; 5:1                ; 7 bits    ; 21 LEs        ; 14 LEs               ; 7 LEs                  ; Yes        ; |mips_multi_cycle|instruction_or_data_memory:component_instruction_or_data_memory|mem_array[1][1]  ;
-; 5:1                ; 6 bits    ; 18 LEs        ; 12 LEs               ; 6 LEs                  ; Yes        ; |mips_multi_cycle|instruction_or_data_memory:component_instruction_or_data_memory|mem_array[0][4]  ;
-; 32:1               ; 32 bits   ; 672 LEs       ; 672 LEs              ; 0 LEs                  ; Yes        ; |mips_multi_cycle|D_FlipFlop:component_D_FlipFlop1|Q[12]                                           ;
-; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; Yes        ; |mips_multi_cycle|instruction_or_data_memory:component_instruction_or_data_memory|mem_array[13][0] ;
-; 5:1                ; 3 bits    ; 9 LEs         ; 6 LEs                ; 3 LEs                  ; Yes        ; |mips_multi_cycle|instruction_or_data_memory:component_instruction_or_data_memory|mem_array[12][3] ;
-; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; Yes        ; |mips_multi_cycle|instruction_or_data_memory:component_instruction_or_data_memory|mem_array[9][3]  ;
-; 5:1                ; 5 bits    ; 15 LEs        ; 10 LEs               ; 5 LEs                  ; Yes        ; |mips_multi_cycle|instruction_or_data_memory:component_instruction_or_data_memory|mem_array[8][0]  ;
-; 5:1                ; 4 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; Yes        ; |mips_multi_cycle|instruction_or_data_memory:component_instruction_or_data_memory|mem_array[3][2]  ;
-; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; Yes        ; |mips_multi_cycle|instruction_or_data_memory:component_instruction_or_data_memory|mem_array[0][5]  ;
+; 5:1                ; 3 bits    ; 9 LEs         ; 6 LEs                ; 3 LEs                  ; Yes        ; |mips_multi_cycle|instruction_or_data_memory:component_instruction_or_data_memory|mem_array[8][1]  ;
+; 5:1                ; 7 bits    ; 21 LEs        ; 14 LEs               ; 7 LEs                  ; Yes        ; |mips_multi_cycle|instruction_or_data_memory:component_instruction_or_data_memory|mem_array[7][5]  ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |mips_multi_cycle|instruction_or_data_memory:component_instruction_or_data_memory|mem_array[6][0]  ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |mips_multi_cycle|instruction_or_data_memory:component_instruction_or_data_memory|mem_array[5][6]  ;
+; 5:1                ; 7 bits    ; 21 LEs        ; 14 LEs               ; 7 LEs                  ; Yes        ; |mips_multi_cycle|instruction_or_data_memory:component_instruction_or_data_memory|mem_array[4][6]  ;
+; 5:1                ; 7 bits    ; 21 LEs        ; 14 LEs               ; 7 LEs                  ; Yes        ; |mips_multi_cycle|instruction_or_data_memory:component_instruction_or_data_memory|mem_array[3][1]  ;
+; 5:1                ; 6 bits    ; 18 LEs        ; 12 LEs               ; 6 LEs                  ; Yes        ; |mips_multi_cycle|instruction_or_data_memory:component_instruction_or_data_memory|mem_array[2][2]  ;
+; 5:1                ; 6 bits    ; 18 LEs        ; 12 LEs               ; 6 LEs                  ; Yes        ; |mips_multi_cycle|instruction_or_data_memory:component_instruction_or_data_memory|mem_array[1][1]  ;
+; 5:1                ; 7 bits    ; 21 LEs        ; 14 LEs               ; 7 LEs                  ; Yes        ; |mips_multi_cycle|instruction_or_data_memory:component_instruction_or_data_memory|mem_array[0][6]  ;
+; 32:1               ; 32 bits   ; 672 LEs       ; 672 LEs              ; 0 LEs                  ; Yes        ; |mips_multi_cycle|D_FlipFlop:component_D_FlipFlop1|Q[6]                                            ;
+; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; Yes        ; |mips_multi_cycle|instruction_or_data_memory:component_instruction_or_data_memory|mem_array[13][3] ;
+; 5:1                ; 3 bits    ; 9 LEs         ; 6 LEs                ; 3 LEs                  ; Yes        ; |mips_multi_cycle|instruction_or_data_memory:component_instruction_or_data_memory|mem_array[12][7] ;
+; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; Yes        ; |mips_multi_cycle|instruction_or_data_memory:component_instruction_or_data_memory|mem_array[9][6]  ;
+; 5:1                ; 5 bits    ; 15 LEs        ; 10 LEs               ; 5 LEs                  ; Yes        ; |mips_multi_cycle|instruction_or_data_memory:component_instruction_or_data_memory|mem_array[8][5]  ;
+; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; Yes        ; |mips_multi_cycle|instruction_or_data_memory:component_instruction_or_data_memory|mem_array[2][4]  ;
+; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; Yes        ; |mips_multi_cycle|instruction_or_data_memory:component_instruction_or_data_memory|mem_array[1][3]  ;
 ; 3:1                ; 7 bits    ; 14 LEs        ; 14 LEs               ; 0 LEs                  ; No         ; |mips_multi_cycle|control_unit:component_control_unit|PS                                           ;
 ; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |mips_multi_cycle|SrcB_calculation:component_SrcB_calculation|mux41:u|Mux15                        ;
-; 4:1                ; 13 bits   ; 26 LEs        ; 26 LEs               ; 0 LEs                  ; No         ; |mips_multi_cycle|SrcB_calculation:component_SrcB_calculation|mux41:u|Mux21                        ;
+; 4:1                ; 13 bits   ; 26 LEs        ; 26 LEs               ; 0 LEs                  ; No         ; |mips_multi_cycle|SrcB_calculation:component_SrcB_calculation|mux41:u|Mux18                        ;
 ; 4:1                ; 112 bits  ; 224 LEs       ; 224 LEs              ; 0 LEs                  ; No         ; |mips_multi_cycle|instruction_or_data_memory:component_instruction_or_data_memory|Mux49            ;
-; 4:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; No         ; |mips_multi_cycle|instruction_or_data_memory:component_instruction_or_data_memory|Mux53            ;
-; 4:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; No         ; |mips_multi_cycle|instruction_or_data_memory:component_instruction_or_data_memory|Mux2             ;
+; 4:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; No         ; |mips_multi_cycle|instruction_or_data_memory:component_instruction_or_data_memory|Mux50            ;
+; 4:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; No         ; |mips_multi_cycle|instruction_or_data_memory:component_instruction_or_data_memory|Mux55            ;
 ; 3:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; No         ; |mips_multi_cycle|Reg_file:component_Reg_file|Reg_file_array                                       ;
-; 8:1                ; 31 bits   ; 155 LEs       ; 124 LEs              ; 31 LEs                 ; No         ; |mips_multi_cycle|Alu:component_Alu|Mux18                                                          ;
-; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |mips_multi_cycle|instruction_or_data_memory:component_instruction_or_data_memory|Read_data[18]    ;
-; 7:1                ; 24 bits   ; 96 LEs        ; 96 LEs               ; 0 LEs                  ; No         ; |mips_multi_cycle|instruction_or_data_memory:component_instruction_or_data_memory|Mux48            ;
-; 7:1                ; 24 bits   ; 96 LEs        ; 96 LEs               ; 0 LEs                  ; No         ; |mips_multi_cycle|instruction_or_data_memory:component_instruction_or_data_memory|Mux51            ;
+; 8:1                ; 31 bits   ; 155 LEs       ; 124 LEs              ; 31 LEs                 ; No         ; |mips_multi_cycle|Alu:component_Alu|Mux12                                                          ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |mips_multi_cycle|instruction_or_data_memory:component_instruction_or_data_memory|Read_data[17]    ;
+; 7:1                ; 24 bits   ; 96 LEs        ; 96 LEs               ; 0 LEs                  ; No         ; |mips_multi_cycle|instruction_or_data_memory:component_instruction_or_data_memory|Mux49            ;
+; 7:1                ; 24 bits   ; 96 LEs        ; 96 LEs               ; 0 LEs                  ; No         ; |mips_multi_cycle|instruction_or_data_memory:component_instruction_or_data_memory|Mux14            ;
 ; 6:1                ; 7 bits    ; 28 LEs        ; 28 LEs               ; 0 LEs                  ; No         ; |mips_multi_cycle|control_unit:component_control_unit|PS                                           ;
-; 32:1               ; 32 bits   ; 672 LEs       ; 672 LEs              ; 0 LEs                  ; No         ; |mips_multi_cycle|Reg_file:component_Reg_file|Mux52                                                ;
+; 32:1               ; 32 bits   ; 672 LEs       ; 672 LEs              ; 0 LEs                  ; No         ; |mips_multi_cycle|Reg_file:component_Reg_file|Mux48                                                ;
 ; 1:1                ; 15 bits   ; 0 LEs         ; 0 LEs                ; 0 LEs                  ; No         ; |mips_multi_cycle|Alu:component_Alu|Add0                                                           ;
-; 7:1                ; 8 bits    ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; No         ; |mips_multi_cycle|instruction_or_data_memory:component_instruction_or_data_memory|Read_data[13]    ;
-; 12:1               ; 8 bits    ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; No         ; |mips_multi_cycle|instruction_or_data_memory:component_instruction_or_data_memory|Read_data[5]     ;
-; 13:1               ; 8 bits    ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; No         ; |mips_multi_cycle|instruction_or_data_memory:component_instruction_or_data_memory|Read_data[26]    ;
+; 7:1                ; 8 bits    ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; No         ; |mips_multi_cycle|instruction_or_data_memory:component_instruction_or_data_memory|Read_data[10]    ;
+; 12:1               ; 8 bits    ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; No         ; |mips_multi_cycle|instruction_or_data_memory:component_instruction_or_data_memory|Read_data[7]     ;
+; 13:1               ; 8 bits    ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; No         ; |mips_multi_cycle|instruction_or_data_memory:component_instruction_or_data_memory|Read_data[31]    ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------------------------------------+
 
 
@@ -2707,7 +2709,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:01     ;
+; Top            ; 00:00:02     ;
 +----------------+--------------+
 
 
@@ -2717,7 +2719,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
-    Info: Processing started: Sun Feb 04 17:59:29 2024
+    Info: Processing started: Fri Jul 19 19:45:17 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off mips_multi_cycle -c mips_multi_cycle
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -2813,9 +2815,9 @@ Info (21057): Implemented 2 device resources after synthesis - the final resourc
     Info (21058): Implemented 2 input pins
     Info (21059): Implemented 0 output pins
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 9 warnings
-    Info: Peak virtual memory: 4880 megabytes
-    Info: Processing ended: Sun Feb 04 17:59:37 2024
-    Info: Elapsed time: 00:00:08
-    Info: Total CPU time (on all processors): 00:00:18
+    Info: Peak virtual memory: 4881 megabytes
+    Info: Processing ended: Fri Jul 19 19:45:27 2024
+    Info: Elapsed time: 00:00:10
+    Info: Total CPU time (on all processors): 00:00:08
 
 
